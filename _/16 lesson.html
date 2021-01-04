@@ -1,0 +1,52 @@
+<html>
+
+<head>
+    <title>JavaScript</title>
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="message"></div>
+    <input type="text" class="hidden">
+    <button type="button">Start</button>
+    <script>
+        const message = document.querySelector(".message");
+        const guess = document.querySelector("input");
+        const button = document.querySelector("button");
+        let inplay = false;
+        const myArray = ["javascript","website","html","document","course"];
+        button.addEventListener("click", function () {
+            console.log("clicked");
+            if(!inplay){
+                inplay = true;
+                button.innerHTML = "Guess";
+                guess.classList.toggle("hidden");
+                console.log(createWord());
+            }
+        })
+        
+        
+        function createWord(){
+            let randomIndex = Math.floor(Math.random() * myArray.length);
+            let tempWord = myArray[randomIndex];
+            console.log(tempWord.split("")) ;
+            return tempWord;
+        }
+        
+        function randomArray(arr){
+        
+        
+        }
+        
+        
+        
+        
+        
+    </script>
+</body>
+
+</html>
